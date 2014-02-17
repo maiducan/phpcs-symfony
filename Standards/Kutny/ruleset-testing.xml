@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ruleset name="Kutny">
+
+<rule ref="Kutny"/>
+<rule ref="Kutny.Namespaces.UsesFromTheSameNamespace"/>
+
+</ruleset>
