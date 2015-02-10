@@ -56,7 +56,7 @@ class Kutny_Sniffs_Commenting_TodoFixSniff implements PHP_CodeSniffer_Sniff
                 $error .= " \"$fixMessage\"";
             }
 
-            $phpcsFile->addWarning($error, $stackPtr);
+            $phpcsFile->addError($error, $stackPtr);
         }
 
     }//end process()
