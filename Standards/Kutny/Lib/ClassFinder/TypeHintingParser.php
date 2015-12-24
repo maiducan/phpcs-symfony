@@ -22,7 +22,7 @@ class Kutny_Lib_ClassFinder_TypeHintingParser {
 				$tokenContent = $tokens[$firstStringAfterParenthisisPtr]['content'];
 				$tokenType = $tokens[$firstStringAfterParenthisisPtr]['type'];
 
-				if ($tokenType === 'T_NS_SEPARATOR' || ($tokenType === 'T_STRING' && preg_match('~^[A-Z]+~', $tokenContent))) {
+				if ($tokenType === 'T_NS_SEPARATOR' || ($tokenType === 'T_STRING' && preg_match('~^[A-Z]+~', $tokenContent)) || $tokenContent = 'stdClass') {
 					$classNames[] = $this->classNameComposerForward->composeClassName($phpcsFile, $firstStringAfterParenthisisPtr);
 				}
 
