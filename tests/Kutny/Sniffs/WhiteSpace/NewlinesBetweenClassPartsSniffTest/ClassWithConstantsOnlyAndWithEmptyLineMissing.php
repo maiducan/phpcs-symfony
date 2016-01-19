@@ -1,7 +1,7 @@
 <?php
 
-class Foo {
-
+class Foo
+{
 	const FOO = 'foo';
 	const BAR = 'BAR';
 

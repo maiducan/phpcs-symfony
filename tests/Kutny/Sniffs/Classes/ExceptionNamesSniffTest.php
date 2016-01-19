@@ -5,7 +5,7 @@ class Kutny_Sniffs_Classes_ExceptionNamesSniffTest extends \Kutny_TestCase
 
 	public function testRule()
 	{
-		$phpcsFile = $this->checkFile(__DIR__ . '/data/ExceptionNamesSniff.php');
+		$phpcsFile = $this->checkFile(__DIR__ . '/ExceptionNamesSniffTest/exceptions.php');
 		$errors = $phpcsFile->getErrors();
 
 		$this->assertEquals(1, $phpcsFile->getErrorCount());

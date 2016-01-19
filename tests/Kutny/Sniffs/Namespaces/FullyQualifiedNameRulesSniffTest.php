@@ -3,7 +3,9 @@
 class Kutny_Sniffs_Namespaces_FullyQualifiedNameRulesSniffTest extends \Kutny_TestCase {
 
 	public function testStandardSituation() {
-		$phpcsFile = $this->checkFile(__DIR__ . '/data/FullyQualifiedNameRulesSniff/StandardSituations.php');
+		$phpcsFile = $this->checkFile(
+			__DIR__ . '/FullyQualifiedNameRulesSniff/StandardSituations.php'
+		);
 		$errors = $phpcsFile->getErrors();
 
 		$this->assertEquals(8, $phpcsFile->getErrorCount());
@@ -50,7 +52,9 @@ class Kutny_Sniffs_Namespaces_FullyQualifiedNameRulesSniffTest extends \Kutny_Te
 	}
 
 	public function testPartialUses() {
-		$phpcsFile = $this->checkFile(__DIR__ . '/data/FullyQualifiedNameRulesSniff/PartialUses.php');
+		$phpcsFile = $this->checkFile(
+			__DIR__ . '/FullyQualifiedNameRulesSniff/PartialUses.php'
+		);
 		$errors = $phpcsFile->getErrors();
 
 		$this->assertEquals(1, $phpcsFile->getErrorCount());
@@ -62,7 +66,9 @@ class Kutny_Sniffs_Namespaces_FullyQualifiedNameRulesSniffTest extends \Kutny_Te
 	}
 
 	public function testMultipleClassesWithSameName() {
-		$phpcsFile = $this->checkFile(__DIR__ . '/data/FullyQualifiedNameRulesSniff/MultipleClassesWithSameName.php');
+		$phpcsFile = $this->checkFile(
+			__DIR__ . '/FullyQualifiedNameRulesSniff/MultipleClassesWithSameName.php'
+		);
 		$errors = $phpcsFile->getErrors();
 
 		$this->assertEquals(1, $phpcsFile->getErrorCount());
@@ -74,7 +80,9 @@ class Kutny_Sniffs_Namespaces_FullyQualifiedNameRulesSniffTest extends \Kutny_Te
 	}
 
 	public function testExceptionExtendsException() {
-		$phpcsFile = $this->checkFile(__DIR__ . '/data/FullyQualifiedNameRulesSniff/ExceptionExtendsException.php');
+		$phpcsFile = $this->checkFile(
+			__DIR__ . '/FullyQualifiedNameRulesSniff/ExceptionExtendsException.php'
+		);
 
 		$this->assertEquals(0, $phpcsFile->getErrorCount());
 	}

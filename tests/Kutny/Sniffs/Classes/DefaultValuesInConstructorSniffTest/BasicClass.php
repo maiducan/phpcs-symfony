@@ -1,6 +1,6 @@
 <?php
 
-class Foo
+class BasicClass
 {
 
 	private $foo = 'x';

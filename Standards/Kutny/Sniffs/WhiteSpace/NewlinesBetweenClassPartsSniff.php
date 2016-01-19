@@ -3,8 +3,7 @@
 /**
  * Checks number of newlines between parts of class or interfaces.
  */
-class Kutny_Sniffs_WhiteSpace_NewlinesBetweenClassPartsSniff
-	extends Kutny_Sniffs_WhiteSpace_AbstractConsecutiveSniffHelper
+class Kutny_Sniffs_WhiteSpace_NewlinesBetweenClassPartsSniff extends Kutny_Sniffs_WhiteSpace_AbstractConsecutiveSniffHelper
 {
 
     /**
@@ -83,9 +82,9 @@ class Kutny_Sniffs_WhiteSpace_NewlinesBetweenClassPartsSniff
 				);
 			}
 
-			if (!$this->isNextLineEmpty($phpcsFile, $tokens[$class]['scope_opener'])) {
+			if ($this->isNextLineEmpty($phpcsFile, $tokens[$class]['scope_opener'])) {
 				$phpcsFile->addError(
-					'Line after ' . $name . ' open parenthesis must be empty.',
+					'Line after ' . $name . ' open parenthesis must NOT be empty.',
 					$this->getLastPtrOnNextLine($phpcsFile, $tokens[$class]['scope_opener'])
 				);
 			}

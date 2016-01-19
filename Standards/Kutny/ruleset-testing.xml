@@ -2,6 +2,5 @@
 <ruleset name="Kutny">
 
 <rule ref="Kutny"/>
-<rule ref="Kutny.Namespaces.UsesFromTheSameNamespace"/>
 
 </ruleset>

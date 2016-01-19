@@ -2,9 +2,21 @@
 <ruleset name="Kutny">
 	<description>Kutny codding standards</description>
 
+	<rule ref="Squiz.Classes.ClassDeclaration">
+		<exclude name="Squiz.Classes.ClassDeclaration.EndFileAfterCloseBrace"/>
+	</rule>
+	<rule ref="Squiz.Classes.ClassFileName"/>
+	<rule ref="Squiz.Classes.DuplicateProperty"/>
+	<rule ref="Squiz.Classes.LowercaseClassKeywords"/>
+	<rule ref="Squiz.Classes.SelfMemberReference"/>
+	<rule ref="Squiz.Classes.ValidClassName"/>
+
 	<!-- Include some sniffs from all around the place -->
 	<rule ref="Generic.Functions.FunctionCallArgumentSpacing"/>
-	<rule ref="Generic.Functions.OpeningFunctionBraceKernighanRitchie"/>
+	<rule ref="Squiz.Functions.FunctionDeclaration"/>
+	<rule ref="Squiz.Functions.MultiLineFunctionDeclaration"/>
+
+	<rule ref="Generic.WhiteSpace.DisallowTabIndent"/>
 
 	<rule ref="Generic.Files.LineLength">
 		<properties>
@@ -22,8 +34,10 @@
 
 	<rule ref="Generic.PHP.LowerCaseConstant"/>
 
-	<rule ref="Kutny.Namespaces.UsesFromTheSameNamespace">
-		<exclude name="Kutny.Namespaces.UsesFromTheSameNamespace"/>
-	</rule>
-
+	<rule ref="PSR2.Files.EndFileNewline"/>
+	<rule ref="PSR2.Methods.FunctionCallSignature"/>
+	<rule ref="PSR2.Methods.MethodDeclaration"/>
+	<rule ref="PSR2.Namespaces.NamespaceDeclaration"/>
+	<rule ref="PSR2.Namespaces.UseDeclaration"/>
+	<rule ref="PSR2.ControlStructures.ControlStructureSpacing"/>
 </ruleset>

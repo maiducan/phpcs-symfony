@@ -5,7 +5,7 @@ class Kutny_Sniffs_WhiteSpace_OperatorSpacingSniffTest extends Kutny_TestCase
 
 	public function testRule()
 	{
-		$phpcsFile = $this->checkFile(__DIR__ . '/data/OperatorSpacingSniff.php');
+		$phpcsFile = $this->checkFile(__DIR__ . '/OperatorSpacingSniffTest/testing-expressions.php');
 		$errors = $phpcsFile->getErrors();
 
 		$this->assertEquals(2, $phpcsFile->getErrorCount());
@@ -21,5 +21,4 @@ class Kutny_Sniffs_WhiteSpace_OperatorSpacingSniffTest extends Kutny_TestCase
 		);
 
 	}
-
 }

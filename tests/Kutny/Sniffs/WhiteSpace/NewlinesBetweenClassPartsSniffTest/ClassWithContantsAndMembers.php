@@ -1,7 +1,7 @@
 <?php
 
-class Test {
-
+class Test
+{
 	const FOO = 'FOO';
 	const BAR = 'BAR';
 
@@ -10,16 +10,15 @@ class Test {
 	/** @var Hobby[] */
 	private $hobbies = array();
 
-	public function __construct() {
-
+	public function __construct()
+	{
 	}
 
-	public function somePublicFunction() {
-
+	public function somePublicFunction()
+	{
 	}
 
-	private function somePrivateFunction() {
-
+	private function somePrivateFunction()
+	{
 	}
-
 }

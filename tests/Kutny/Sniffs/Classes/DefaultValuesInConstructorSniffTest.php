@@ -5,7 +5,7 @@ class Kutny_Sniffs_Classes_DefaultValuesInConstructorSniffTest extends \Kutny_Te
 
 	public function testRule()
 	{
-		$phpcsFile = $this->checkFile(__DIR__ . '/data/DefaultValuesInConstructorSniff.php');
+		$phpcsFile = $this->checkFile(__DIR__ . '/DefaultValuesInConstructorSniffTest/BasicClass.php');
 		$errors = $phpcsFile->getErrors();
 		$this->assertEquals(1, $phpcsFile->getErrorCount());
 

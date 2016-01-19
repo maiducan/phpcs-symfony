@@ -1,12 +1,10 @@
 <?php
 
-class Kutny_Sniffs_Classes_MultipleConstantsOrMembersDeclarationSeparatedByCommasSniffTest
-	extends \Kutny_TestCase
+class Kutny_Sniffs_Classes_MultipleConstantsOrMembersDeclarationSeparatedByCommasSniffTest extends \Kutny_TestCase
 {
-
 	public function testConstants()
 	{
-		$phpcsFile = $this->checkFile(__DIR__ . '/data/MultipleConstants.php');
+		$phpcsFile = $this->checkFile(__DIR__ . '/MultipleConstantsOrMembersDeclarationSeparatedByCommasSniffTest/multiple-constants.php');
 		$errors = $phpcsFile->getErrors();
 
 		$this->assertEquals(2, $phpcsFile->getErrorCount());
@@ -24,7 +22,7 @@ class Kutny_Sniffs_Classes_MultipleConstantsOrMembersDeclarationSeparatedByComma
 
 	public function testMembers()
 	{
-		$phpcsFile = $this->checkFile(__DIR__ . '/data/MultipleMembers.php');
+		$phpcsFile = $this->checkFile(__DIR__ . '/MultipleConstantsOrMembersDeclarationSeparatedByCommasSniffTest/multiple-members.php');
 		$errors = $phpcsFile->getErrors();
 
 		$this->assertEquals(1, $phpcsFile->getErrorCount());
@@ -34,5 +32,4 @@ class Kutny_Sniffs_Classes_MultipleConstantsOrMembersDeclarationSeparatedByComma
 			$errors[6][26][0]['message']
 		);
 	}
-
 }

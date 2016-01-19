@@ -60,7 +60,7 @@ class Kutny_Sniffs_WhiteSpace_NewlinesBetweenClassPartsSniffTest extends Kutny_T
 
 		$this->assertEquals(
 			'Line after function close parenthesis must be empty.',
-			$errors[12][47][0]['message']
+			$errors[14][45][0]['message']
 		);
 	}
 

@@ -6,7 +6,7 @@
 class Kutny_Sniffs_WhiteSpace_ConsecutiveNewlinesSniffTest extends Kutny_TestCase {
 
 	public function testConsecutiveNewLinesUsed() {
-		$phpcsFile = $this->checkFile(__DIR__ . '/data/consecutive-new-lines.php');
+		$phpcsFile = $this->checkFile(__DIR__ . '/ConsecutiveNewlinesSniffTest/consecutive-new-lines.php');
 		$errors = $phpcsFile->getErrors();
 
 		$this->assertEquals(1, $phpcsFile->getErrorCount());

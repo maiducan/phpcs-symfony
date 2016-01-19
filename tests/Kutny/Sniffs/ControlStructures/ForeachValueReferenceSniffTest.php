@@ -5,7 +5,7 @@ class Kutny_Sniffs_ControlStructures_ForeachValueReferenceSniffTest extends \Kut
 
 	public function testRule()
 	{
-		$phpcsFile = $this->checkFile(__DIR__ . '/data/ForeachValueReferenceSniff.php');
+		$phpcsFile = $this->checkFile(__DIR__ . '/ForeachValueReferenceSniffTest/foreaches.php');
 		$errors = $phpcsFile->getErrors();
 
 		$this->assertEquals(1, $phpcsFile->getErrorCount());
