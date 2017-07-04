@@ -8,6 +8,8 @@
 		"symfony"
 	],
 	"license": "MIT",
+	"minimum-stability" : "dev",
+	"prefer-stable" : true,
 	"require": {
 		"php": ">=7.1.0",
 		"phpunit/phpunit": "3.7.*",
